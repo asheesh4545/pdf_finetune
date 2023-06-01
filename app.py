@@ -10,7 +10,7 @@ import os
 
 os.environ["OPENAI_API_KEY"] = "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"
 
-
+#Github Addition just to check
 
 def process_pdf(file_path):
     reader = PdfReader(file_path)
