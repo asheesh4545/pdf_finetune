@@ -7,10 +7,11 @@ from langchain.chains.question_answering import load_qa_chain
 from langchain.llms import OpenAI
 import os
 
+from dotenv import dotenv_values
+env_vars = dotenv_values(".env")
 
-os.environ["OPENAI_API_KEY"] = "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"
 
-#Github Addition just to check
+os.environ["OPENAI_API_KEY"] = env_vars['OPENAI_API_KEY']
 
 def process_pdf(file_path):
     reader = PdfReader(file_path)
