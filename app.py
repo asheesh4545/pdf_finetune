@@ -11,7 +11,8 @@ from dotenv import dotenv_values
 env_vars = dotenv_values(".env")
 
 
-os.environ["OPENAI_API_KEY"] = env_vars['OPENAI_API_KEY']
+#os.environ["OPENAI_API_KEY"] = env_vars['OPENAI_API_KEY']
+OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
 
 def process_pdf(file_path):
     reader = PdfReader(file_path)
