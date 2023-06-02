@@ -12,7 +12,9 @@ env_vars = dotenv_values(".env")
 
 
 #os.environ["OPENAI_API_KEY"] = env_vars['OPENAI_API_KEY']
-OPENAI_API_KEY = os.environ["OPENAI_API_KEY"]
+
+#We set the env varaibles on streamlit settings and then retrive it using the st.secrets command
+os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
 def process_pdf(file_path):
     reader = PdfReader(file_path)
